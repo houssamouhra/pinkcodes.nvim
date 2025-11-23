@@ -9,10 +9,6 @@
   <strong>Inspired by <a href="https://github.com/PinkC0des/pinkcodes-vscode">pinkcodes-vscode</a></strong>
 </p>
 
-<p align="center">
-  <a href="#Installation (lazy.nvim)">Installation</a> •
-  <a href="https://github.com/houssamouhra/pinkcodes.nvim?tab=MIT-1-ov-file">License</a>
-</p>
 
 ## Installation (lazy.nvim)
 
