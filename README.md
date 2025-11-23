@@ -1,4 +1,3 @@
-<br>
 <h1 align="center">
   <img src="https://i.imgur.com/4BaKSjZ.png" alt="PinkCodes Logo" width="100">
   <br>
@@ -11,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="#Installation (Lazy.nvim)">Installation</a> •
-  <a href="https">License</a>
+  <a href="#Installation (lazy.nvim)">Installation</a> •
+  <a href="https://github.com/houssamouhra/pinkcodes.nvim?tab=MIT-1-ov-file">License</a>
 </p>
 
 ## Installation (lazy.nvim)
