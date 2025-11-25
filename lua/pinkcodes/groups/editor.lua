@@ -1,39 +1,64 @@
 local P = require("pinkcodes.palette")
 
 return {
-  
-  Normal          = { fg = P.fg, bg = P.bg },
-  CursorLine      = { bg = P.dim.list_active },
-  CursorColumn    = { bg = P.dim.list_active },
-  LineNr          = { fg = "#624051" },
-  CursorLineNr    = { fg = P.magenta, bold = true },
+	-- Core editor
+	Normal = { fg = P.fg, bg = P.bg },
+	NormalNC = { fg = P.fg, bg = P.dim.list_inactive },
+	NormalFloat = { fg = P.fg, bg = P.dim.editor_drop },
+	FloatBorder = { fg = P.dim.panel_border, bg = P.dim.editor_drop },
 
-  Visual          = { bg = P.dim.terminal_selection },
-  Search          = { bg = P.dim.find_bg, fg = P.fg },
-  IncSearch       = { bg = P.yellow, fg = P.bg },
+	Cursor = { bg = P.cursor },
+	CursorLine = { bg = P.dim.list_focus },
+	CursorColumn = { bg = P.dim.list_focus },
 
-  MatchParen      = { fg = P.red, bold = true },
+	ColorColumn = { bg = P.dim.indent },
+	SignColumn = { bg = P.bg },
+	EndOfBuffer = { fg = P.dim.indent },
 
-  Folded          = { fg = P.magenta, bg = P.bg },
-  FoldColumn      = { fg = P.magenta, bg = P.bg },
+	-- Line numbers
+	LineNr = { fg = P.comment },
+	CursorLineNr = { fg = P.comment, bold = true },
 
-  ColorColumn     = { bg = P.dim.indent_active },
+	-- Selection / Search / Match
+	Visual = { bg = P.selection, fg = P.bg },
+	VisualNOS = { bg = P.selection, fg = P.bg },
 
-  -- Diagnostics
-  DiagnosticError = { fg = "#E96379" },
-  DiagnosticWarn  = { fg = "#E89E64" },
-  DiagnosticInfo  = { fg = P.blue },
-  DiagnosticHint  = { fg = P.magenta },
+	Search = { bg = P.dim.find_bg, fg = P.white },
+	IncSearch = { bg = P.dim.find_range_bg, fg = P.white },
 
-  Pmenu           = { bg = P.bg, fg = P.fg },
-  PmenuSel        = { bg = P.dim.list_focus, fg = P.fg },
-  PmenuSbar       = { bg = P.dim.list_inactive },
-  PmenuThumb      = { bg = P.dim.list_hover },
+	MatchParen = { bg = P.dim.peek_match, fg = P.white, bold = true },
 
-  StatusLine      = { fg = P.fg, bg = P.bg },
-  StatusLineNC    = { fg = P.dim.panel_inactive, bg = P.bg },
+	-- UI elements
+	Whitespace = { fg = P.dim.indent },
+	NonText = { fg = P.dim.indent },
 
-  TabLine         = { fg = P.dim.tab_inactive_fg, bg = P.bg },
-  TabLineSel      = { fg = P.fg, bg = P.dim.tab_active_bg },
+	WinSeparator = { fg = P.dim.panel_border },
 
+	Folded = { fg = P.dim.panel_inactive, bg = P.dim.list_inactive },
+	FoldColumn = { fg = P.dim.panel_inactive, bg = P.bg },
+
+	-- Popup menu
+	Pmenu = { bg = P.dim.list_inactive, fg = P.fg },
+	PmenuSel = { bg = P.dim.list_focus, fg = P.white },
+	PmenuSbar = { bg = P.dim.list_active },
+	PmenuThumb = { bg = P.dim.list_hover },
+
+	-- Statusline / Tabs
+	StatusLine = { fg = P.white, bg = P.dim.list_hover },
+	StatusLineNC = { fg = P.dim.panel_inactive, bg = P.dim.list_inactive },
+
+	TabLine = { fg = P.dim.tab_inactive_fg, bg = P.dim.list_inactive },
+	TabLineSel = { fg = P.white, bg = P.dim.tab_active_bg },
+	TabLineFill = { bg = P.dim.list_inactive },
+
+	-- Diagnostics (LSP)
+	DiagnosticError = { fg = P.diag.error },
+	DiagnosticWarn = { fg = P.diag.warn },
+	DiagnosticInfo = { fg = P.diag.info },
+	DiagnosticHint = { fg = P.diag.hint },
+
+	DiagnosticUnderlineError = { undercurl = true, sp = P.diag.error },
+	DiagnosticUnderlineWarn = { undercurl = true, sp = P.diag.warn },
+	DiagnosticUnderlineInfo = { undercurl = true, sp = P.diag.info },
+	DiagnosticUnderlineHint = { undercurl = true, sp = P.diag.hint },
 }
