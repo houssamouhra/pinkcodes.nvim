@@ -4,8 +4,8 @@ local P = {}
 P.bg = "#0B010B" -- main background
 P.fg = "#d4d4d4" -- main foreground
 
-P.cursor = "#7D3A58"
-P.selection = "#99ccff"
+P.cursor = "#d4d4d4"
+P.selection = "#75455a"
 
 P.comment = "#624051"
 P.keyword = "#ff79ac"
