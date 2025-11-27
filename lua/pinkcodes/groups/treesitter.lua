@@ -30,7 +30,7 @@ return {
 	["@function.call"] = { fg = P.func }, -- NOT italic
 	["@function.builtin"] = { fg = P.func, bold = false },
 	["@function.method"] = { fg = P.func },
-	["@constructor"] = { fg = P.func, italic = true },
+	["@constructor"] = { fg = P.yellow, italic = true },
 
 	-- Keywords
 	["@keyword"] = { fg = P.keyword },
